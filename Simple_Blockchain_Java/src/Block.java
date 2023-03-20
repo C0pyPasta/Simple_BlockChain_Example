@@ -32,6 +32,6 @@ public class Block {
 
     @Override
     public String toString() {
-        return "Id." + this.id + " -" + this.transactions + "- " + this.previousHash + " - " + this.hash + " -";
+        return this.transactions + "- " + this.previousHash + " - " + this.hash + " -";
     }
 }
