@@ -10,9 +10,9 @@ public class Main {
 
         // "Block number" staat voor deze presentatie op de plek waar je normaal gesproken de transacties zal vermelden om op te nemen
         // in de te berekenen hash zodat deze achteraf niet meer kunnen worden gewijzigd (want dan veranderd ook de hash natuurlijk)
-        // De transacties zelf zijn op basis van een wallet adres (Public key = hash) en een transactie heeft daarnaast een
-        // transactieHASH of messageSignature die gemaakt is met de private sleutel van de betreffende wallet waarmee
-        // eventueel de saldo check en inkomsten/uitgave kunnen worden herleid en gecontroleerd
+        // De transacties zelf zijn op basis van een wallet adres (Public key/hash) en een transactie heeft daarnaast een
+        // transactie Hash of (message) Signature die gemaakt is met de private sleutel van de betreffende wallet waarmee
+        // eventueel de saldo check en inkomsten/uitgave kunnen worden herleid en gecontroleerd op dubbele uitgaven bijvoorbeeld.
         for(int i=1; i < 10; i++){
             Block newBlock = new Block(i, " block number " + i + ": "  , blockChain.getBlockChain().get(blockChain.size()-1).getHash());
             miner.mines(blockChain, newBlock);
