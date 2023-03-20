@@ -7,9 +7,8 @@ public class Miner {
             block.incrementNonce();
         }
         System.out.println(block + " has just been mined...");
-        System.out.println("Hash is: " + block.getHash());
         blockChain.addBlock(block);
-        reward+=Constants.MINER_REWARD;
+        reward += Constants.MINER_REWARD;
     }
 
     //Miners will generate hash values until they find the right hash
