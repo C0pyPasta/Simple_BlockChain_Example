@@ -11,6 +11,7 @@ public class BlockChain {
     public void addBlock(Block block) {
         this.blockChain.add(block);
     }
+
     public List<Block> getBlockChain() {
         return this.blockChain;
     }

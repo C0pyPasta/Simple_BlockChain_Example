@@ -12,8 +12,5 @@ public class Main {
             Block newBlock = new Block(i, " transaction " + i + ": "  , blockChain.getBlockChain().get(blockChain.size()-1).getHash());
             miner.mines(blockChain, newBlock);
         }
-
-        System.out.println("\n"+ "BLOCKCHAIN:\n"+ blockChain);
-        System.out.println("Miner's reward: " + miner.getReward());
     }
 }
